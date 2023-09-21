@@ -13,7 +13,7 @@ public class Door : MonoBehaviour
     {
         float distance = Vector3.Distance(player.position, door.position);
 
-        if (distance <= 5)
+        if (distance <= 4)
         {
             animator.SetBool("Near", true);
         }
@@ -22,7 +22,7 @@ public class Door : MonoBehaviour
             animator.SetBool("Near", false);
         }
 
-        if (distance >= 5)
+        if (distance >= 4)
         {
             animator.SetBool("Disappearing", true);
         }

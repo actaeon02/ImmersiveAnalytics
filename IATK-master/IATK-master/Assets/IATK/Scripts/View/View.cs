@@ -18,9 +18,6 @@ namespace IATK
 
         //bigmesh object
         BigMesh bigMesh;
-
-        // Tooltip
-        public Tooltip tooltip;
         
         public BigMesh BigMesh
         {
@@ -38,28 +35,6 @@ namespace IATK
         void Start()
         {
 
-        }
-
-        private void OnMouseEnter()
-        {
-            string tooltipText = "Data: " + bigMesh.getBigMeshVertices().ToString();
-            tooltip.ShowTooltip(transform.position, tooltipText);
-        }
-
-        private void OnTriggerEnter(Collider other)
-        {
-            string tooltipText = "Data: " + bigMesh.getBigMeshVertices().ToString();
-            tooltip.ShowTooltip(transform.position, tooltipText);
-        }
-
-        private void OnMouseExit()
-        {
-            tooltip.HideToolTip();
-        }
-
-        private void OnTriggerExit(Collider other)
-        {
-            tooltip.HideToolTip();
         }
 
 
